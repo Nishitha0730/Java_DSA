@@ -19,5 +19,8 @@ public class Main {
 
         sll.insertLast(123);
         sll.display();
+        
+        sll.deleteAtIndex(1);
+        sll.display();
     }
 }

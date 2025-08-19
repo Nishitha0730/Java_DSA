@@ -85,6 +85,25 @@ public class SLL{
         return tail.value;
     }
 
+    public int deleteAtIndex(int index){
+        if(index<0 || index>size-1){
+            throw new IndexOutOfBoundsException("Index out of bounds");
+        }
+        if(index == 0){
+            return deleteFirst();}
+        else if(index == size-1){
+            return deleteLast();
+        }
+        Node temp = head;
+        for (int i=0;i<index-1;i++){
+            temp = temp.next;
+        }
+        int value = temp.next.value;
+        temp.next = temp.next.next;
+        size--;
+        return value;
+    }
+
     public class Node{
         int value;
         Node next;
