@@ -42,6 +42,9 @@ public class SLL{
 
     public void insertAtIndex(int index,int value){
         Node node  = new Node(value);
+        if(index < 0 || index > size){
+            throw new IndexOutOfBoundsException("Index out of bounds");
+        }
         if(index==0){
             insertFirst(value);
             return;

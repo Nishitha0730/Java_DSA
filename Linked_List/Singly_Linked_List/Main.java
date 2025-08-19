@@ -6,6 +6,7 @@ public class Main {
         sll.insertLast(10);
         sll.insertFirst(20);
         sll.insertAtIndex(1, 15);
+        sll.insertAtIndex(100, 11);
         sll.display();
     }
 }
