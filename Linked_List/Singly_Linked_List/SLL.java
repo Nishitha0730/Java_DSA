@@ -70,7 +70,19 @@ public class SLL{
         if(head == null){
             tail = null;
         }
+        size--;
         return value;
+    }
+
+    public int deleteLast(){
+        Node temp = head;
+        for(int i=0;i<size-2;i++){
+            temp = temp.next;
+        }
+        temp.next = null;
+        tail = temp;
+        size--;
+        return tail.value;
     }
 
     public class Node{

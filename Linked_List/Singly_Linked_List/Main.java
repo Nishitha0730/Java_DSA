@@ -13,5 +13,11 @@ public class Main {
 
         sll.insertFirst(22);
         sll.display();
+
+        sll.deleteLast();
+        sll.display();
+
+        sll.insertLast(123);
+        sll.display();
     }
 }
