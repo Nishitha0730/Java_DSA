@@ -63,6 +63,16 @@ public class SLL{
         size++;
     }
 
+    // Delete item in the linked list
+    public int deleteFirst(){
+        int value = head.value;
+        head = head.next;
+        if(head == null){
+            tail = null;
+        }
+        return value;
+    }
+
     public class Node{
         int value;
         Node next;
