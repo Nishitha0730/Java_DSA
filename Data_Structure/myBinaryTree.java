@@ -53,5 +53,31 @@ public class myBinaryTree {
                 inOrderRec(node.right);
             }
         }
+
+        public int getHeight(){
+            return getHeightRec(root);
+        }
+
+        public int getHeightRec(Node node){
+            if(node == null){
+                return 0;
+            }
+            int leftHeight = getHeightRec(node.left);
+            int rightHeight = getHeightRec(node.right);
+            return Math.max(leftHeight, rightHeight) + 1;
+        }
+
+        public boolean search(int data){
+            return searchRec(root, data);
+        }
+        public boolean searchRec(Node current, int data){
+            if(current==null){
+                return false;
+            }
+            if(current.data == data){
+                return true;
+            }
+            return data < current.data ? searchRec(current.left, data) : searchRec(current.right, data);
+        }
     }
 }
