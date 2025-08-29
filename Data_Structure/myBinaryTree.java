@@ -39,5 +39,19 @@ public class myBinaryTree {
             }
             return current;
         }
+
+        public void inOrder(){
+            System.out.println("In-Oder :  ");
+            inOrderRec(root);
+            System.out.println();
+        }
+
+        public void inOrderRec(Node node){
+            if(node != null){
+                inOrderRec(node.left);
+                System.out.print(node.data + " ");
+                inOrderRec(node.right);
+            }
+        }
     }
 }
