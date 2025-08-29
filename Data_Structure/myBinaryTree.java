@@ -2,7 +2,15 @@ package Data_Structure;
 
 public class myBinaryTree {
     public static void main(String[] args){
-        System.out.println("Hello World ");
+        // System.out.println("Hello World ");
+
+        BinaryTree mytree = new BinaryTree();
+        mytree.insert(50);
+        mytree.insert(60);
+        mytree.insert(70);
+        mytree.insert(80);
+        mytree.inOrder();
+        System.out.println("Height: " + mytree.getHeight());
     }
 
     public static class Node{
