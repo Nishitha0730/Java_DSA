@@ -3,7 +3,7 @@ import java.util.Random;
 public class BubbleSort {
     public static void main(String[] args){
         Random rand = new Random();
-        int[] numbers = new int[10];
+        int[] numbers = new int[100];
 
         for(int i=0;i<numbers.length;i++){
             numbers[i] = rand.nextInt(100000);
